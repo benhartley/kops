@@ -98,6 +98,9 @@ func hclPrint(node ast.Node) ([]byte, error) {
 	}
 	s := b.String()
 
+	// Add trailing newline
+	s += "\n"
+
 	// Remove extra whitespace...
 	s = strings.Replace(s, "\n\n", "\n", -1)
 
